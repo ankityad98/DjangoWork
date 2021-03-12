@@ -1,0 +1,10 @@
+{% extends 'logistapp/base.html' %}
+
+{% block content %}
+    {% for trip in trip_list %}
+    <ul class="list-group">
+        <h1><a href="{% url 'trip_detail' pk=trip.pk %}" class="list-group-item">{{ trip.trip_name }}</a></h1>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'logistapp/base.html' %}
+
+{% block content %}
+
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>TRIP NAME</th>
+        <th>FROM</th>
+        <th>TO</th>
+        <th>TRUCK TYPE</th>
+        <th>Date Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{trip.trip_name}}</td>
+        <td>{{trip.source}}</td>
+        <td>{{trip.destination}}</td>
+        <td>{{trip.truck_type}}</td>
+        <td>{{trip.Date_time}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-primary" href="{% url 'trip_edit' pk=trip.pk %}"><span class="fa fa-pencil"></span></a>
+  <a class="btn btn-primary" href="{% url 'trip_remove' pk=trip.pk %}"><span class="fa fa-remove"></span></a>
+
+
+
+
+{% endblock %}

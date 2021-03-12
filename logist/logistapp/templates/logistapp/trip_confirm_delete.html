@@ -1,0 +1,7 @@
+{% extends "logistapp/base.html" %}
+{% block content %}
+  <form action="" method="post">{% csrf_token %}
+    <h2>Are you sure you want to delete "{{trip.trip_name }}"?</h2>
+    <input class='btn btn-danger' type="submit" value="Confirm" />
+  </form>
+{% endblock %}
