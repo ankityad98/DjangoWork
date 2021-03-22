@@ -1,5 +1,5 @@
 
-> ####Steps to Run
+> #### Steps to Run
 
 1. Move to project root folder ($ cd logist)
 
